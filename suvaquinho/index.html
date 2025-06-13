@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gf - Suvaquinho ♡ </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            background: linear-gradient(to bottom, #ffebee, #fce4ec);
+        }
+        
+        .love-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .music-note {
+            animation: noteFloat 3s linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes noteFloat {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(20deg); opacity: 0; }
+        }
+        
+        .note-1 { animation-delay: 0s; left: 10%; }
+        .note-2 { animation-delay: 0.5s; left: 30%; }
+        .note-3 { animation-delay: 1s; left: 50%; }
+        .note-4 { animation-delay: 1.5s; left: 70%; }
+        .note-5 { animation-delay: 2s; left: 90%; }
+    </style>
+</head>
+<body class="text-pink-900">
+    <!-- Botão de música fixo -->
+    <button id="musicBtn" class="fixed bottom-6 right-6 z-50 bg-pink-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:bg-pink-700 transition-all heart-beat">
+        <i class="fas fa-music text-2xl"></i>
+        <audio id="loveSong" loop>
+            <source src="A Teenager in Love (2012 Remaster).mp3" type="audio/mpeg">
+        </audio>
+    </button>
+    
+    <!-- Efeito de notas musicais -->
+    <div id="musicNotes" class="fixed inset-0 pointer-events-none hidden">
+        <div class="absolute note-1 music-note"><i class="fas fa-music text-pink-400"></i></div>
+        <div class="absolute note-2 music-note"><i class="fas fa-music text-pink-400"></i></div>
+        <div class="absolute note-3 music-note"><i class="fas fa-music text-pink-400"></i></div>
+        <div class="absolute note-4 music-note"><i class="fas fa-music text-pink-400"></i></div>
+        <div class="absolute note-5 music-note"><i class="fas fa-music text-pink-400"></i></div>
+    </div>
+    
+    <!-- Cabeçalho -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80')] bg-cover bg-center parallax"></div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white love-text fade-in">Feliz Dia dos Namorados</h1>
+            <p class="text-xl md:text-2xl text-pink-200 mb-8 fade-in">De um gf307 para uma suvaquinho..</p>
+            
+            <div class="floating">
+                <i class="fas fa-heart text-6xl text-red-500 mb-8"></i>
+            </div>
+            
+            <a href="#poema" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-full transition-all inline-block transform hover:scale-105">
+                Estou pronta!
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#poema" class="text-white text-xl animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    
+    <!-- Seção 1 - Poema -->
+    <section id="poema" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white bg-opacity-80 rounded-xl shadow-lg p-8 md:p-12 backdrop-blur-sm">
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center text-pink-700 love-text">Prezada Rebecca Suvaquinho, </h2>
+                
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-pink-900">
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div>
+                            <p>Sei que que as vezes pode até não parecer existir luz no fim do túnel, mas não poderia de deixar minha homenagem a uma mulher que tanto amo, de forma a deixar passar algo nesse dia simbólico.</p>
+                            <p class="mt-4">Tudo o que vivemos juntos significou e ainda significa muito sobre a minha pessoa, moldou quem eu sou e me ajudou a entender que tipo de homem quero ser, espero que ao seu lado.</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="\WhatsApp Image 2025-06-12 at 23.46.55.jpeg" alt="Casal apaixonado" class="rounded-lg shadow-md w-full max-w-xs object-cover h-64">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-8 md:flex-row-reverse">
+                        <div class="order-1 md:order-2">
+                            <p>Não mudou e nem vai mudar, continuo amando todos os detalhes que já amava em você, da minha forma, do meu jeito.</p>
+                            <p class="mt-4">Há capítulos que não se encerram, pausas as vezes não conseguimos entender, mas pode ser parte do caminho final.</p>
+                        </div>
+                        <div class="order-2 md:order-1 flex justify-center">
+                            <img src="\WhatsApp Image 2025-06-12 at 23.46.53 (1).jpeg" alt="Casal de mãos dadas" class="rounded-lg shadow-md w-full max-w-xs object-cover h-64">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção 2 - Galeria -->
+    <section class="py-20 px-4 bg-pink-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-pink-700 love-text">Nossos Momentos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-12 at 23.46.53.jpeg" alt="Casal feliz" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Na saúde e na doença, literalmente</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-12 at 23.46.54 (1).jpeg" alt="Casal abraçado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">POV: o cinema fica sem graça quando esta ruivinha não está</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-12 at 23.46.54 (3).jpeg" alt="Casal na praia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Registro raro de ser humano do sexo masculino conhecido por gf307 sem estar com a mão na cara..</p>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-12 at 23.46.54.jpeg" alt="Casal no campo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Na riqueza e na pobreza, de saúde</p>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-12 at 23.46.55 (1).jpeg" alt="Casal no pôr do sol" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">O que é gf sem sua ruivinha? ... Não há gf.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 h-80 gallery-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="WhatsApp Image 2025-06-13 at 00.01.05.jpeg" alt="Casal rindo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white text-lg love-text transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">No rock e na festa junina.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção 3 - Carta de Amor -->
+    <section class="py-20 px-4" style="background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1625&q=80')">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white bg-opacity-90 rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-2/3 p-8 md:p-12">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-pink-700 love-text">Minha Querida Peitudinha,</h2>
+                        
+                        <div class="space-y-6 text-lg">
+                            <p>Com você ao meu lado, superei barreiras que nunca teria conseguido sozinho. Há coisas praticamente impossíveis de se expressar, e uma delas é a minha gratidão por você.</p>
+                            
+                            <p>Antes de nossos caminhos se cruzarem, achava quase impossível algo assim acontecer com uma pessoa feito eu, um pobre zé ninguém..</p>
+                            
+                            <p>Então imagine só minha alegria ao ter um crush desse nível correspondido, num tipo conexão que eu nunca vou saber explicar, mas que morrerei grato por ter sentido, e foi com você.</p>
+                            
+                            <p>Impossível também mensurar o tamanho orgulho que tenho em ver a pessoa bondosa que você é, e em como você luta para se tornar, a cada dia que passa, uma pessoa melhor. Diga que não, mas eu considero isso uma inspiração, difícil disfarçar o brilho no olhar.</p>
+                                                        
+                            <p>O futuro eu não sei, mas no passado e no presente, você é a mulher pela qual dedicarei meu esforço e meu amor. Não foi difícil chegar nessa conclusão, e tenho certeza de que valerá totalmente a pena, porque não é normal o nível de paixão que nós dois compartilhamos um com o outro. Por essas e por outras, feliz dia dos namorados ruivinha linda.</p>
+                            
+                            <p class="mt-8 love-text text-3xl text-right">Com todo meu amor,<br>gf307.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3 bg-pink-100 flex items-center justify-center p-8">
+                        <div class="relative">
+                            <img src="\WhatsApp Image 2025-06-12 at 23.46.54 (2).jpeg" alt="Casal feliz" class="rounded-lg shadow-md w-full max-w-xs object-cover">
+                            
+                            <div class="absolute -top-4 -left-4 bg-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-heart text-red-500 text-xl"></i>
+                            </div>
+                            
+                            <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-heart text-red-500 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="bg-pink-900 text-pink-100 py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 love-text">Feliz Dia dos Namorados</h2>
+           
+            <div class="heart-beat inline-block">
+                <i class="fas fa-heart text-red-500 text-4xl"></i>
+            </div>
+            
+            <p class="mt-8 text-sm text-pink-300">© 2025 - Um presente de amor para você</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Controle da música
+        const musicBtn = document.getElementById('musicBtn');
+        const loveSong = document.getElementById('loveSong');
+        const musicNotes = document.getElementById('musicNotes');
+        let isPlaying = false;
+        
+        musicBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                loveSong.pause();
+                musicNotes.classList.add('hidden');
+                musicBtn.classList.remove('bg-pink-700');
+                musicBtn.classList.add('bg-pink-600');
+            } else {
+                loveSong.play();
+                musicNotes.classList.remove('hidden');
+                musicBtn.classList.remove('bg-pink-600');
+                musicBtn.classList.add('bg-pink-700');
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Animação para os cards e elementos
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.fade-in, .gallery-card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    
+                    if (element.classList.contains('gallery-card')) {
+                        element.style.transform = 'translateY(0)';
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Animação flutuante aleatória para alguns elementos
+        function randomizeFloating() {
+            const floatingElements = document.querySelectorAll('.floating');
+            floatingElements.forEach(el => {
+                const duration = 3 + Math.random() * 2; // entre 3 e 5 segundos
+                el.style.animationDuration = `${duration}s`;
+            });
+        }
+        
+        randomizeFloating();
+        
+        // Efeito de coração ao clicar
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('#musicBtn')) return;
+            
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            const heart = document.createElement('div');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.position = 'fixed';
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            heart.style.color = 'rgba(236, 72, 153, 0.7)';
+            heart.style.pointerEvents = 'none';
+            heart.style.transform = 'translate(-50%, -50%) scale(0)';
+            heart.style.transition = 'all 0.8s ease-out';
+            heart.style.zIndex = '9999';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.style.transform = 'translate(-50%, -50%) scale(2)';
+                heart.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
